@@ -1,26 +1,35 @@
-Как запустить проект:
+# Как запустить проект:
 
-Клонировать репозиторий и перейти в него в командной строке:
+## Клонировать репозиторий и перейти в него в командной строке:
 
-git clone https://github.com/yandex-praktikum/kittygram.git
+```
+git clone ...
 cd kittygram
-Cоздать и активировать виртуальное окружение:
+```
 
+**Cоздать и активировать виртуальное окружение:**
+
+```
 python3 -m venv env
 source env/bin/activate
-Установить зависимости из файла requirements.txt:
+```
 
+**Установить зависимости из файла requirements.txt:**
+```
 python3 -m pip install --upgrade pip
 pip install -r requirements.txt
+```
 Выполнить миграции:
-
+```
 python3 manage.py migrate
-Запустить проект:
+```
+
+**Запустить проект:** 
 
 python3 manage.py runserver
 
-Примеры запросов и ответов:
-
+# Примеры запросов и ответов:
+```
 /api/v1/posts/ Response:{
 
 "count": 123,
@@ -32,7 +41,8 @@ python3 manage.py runserver
     {}
 ]
 }
-
+```
+```
 /api/v1/posts/ Post data:{ "text": "string", "image": "string", "group": 0 } Response:{
 
 "id": 0,
@@ -42,7 +52,8 @@ python3 manage.py runserver
 "image": "string",
 "group": 0
 }
-
+```
+```
 api/v1/jwt/create/ Post data:{
 
 "username": "string",
@@ -52,3 +63,4 @@ api/v1/jwt/create/ Post data:{
 "refresh": "string",
 "access": "string"
 }
+```
